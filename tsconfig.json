@@ -1,10 +1,42 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "jsx": "react-native",
+    "moduleResolution": "bundler",
     "strict": true,
+    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "screens/*": [
+        "screens/*"
+      ],
+      "navigation/*": [
+        "navigation/*"
+      ],
+      "services/*": [
+        "services/*"
+      ],
+      "store/*": [
+        "store/*"
+      ],
+      "types/*": [
+        "types/*"
+      ],
+      "utils/*": [
+        "utils/*"
+      ],
+      "components/*": [
+        "components/*"
+      ]
     }
-  }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "nativewind-env.d.ts"
+  ],
+  "exclude": [
+    "functions",
+    "packages"
+  ]
 }
